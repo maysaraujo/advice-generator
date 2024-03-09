@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import RandomButton from '../RandomButton';
 import Divider from '/images/pattern-divider-desktop.svg';
+import DividerMobo from '/images/pattern-divider-mobile.svg';
 
 const Advice = () => {
   const [advice, setAdvice] = useState('');
@@ -28,6 +29,10 @@ const Advice = () => {
 
       <div className='divider'>
         <img src={Divider} alt='Divider' />
+      </div>
+
+      <div className='dividerMobo'>
+        <img src={DividerMobo} alt='Divider' />
       </div>
 
       <div className='randomButton' onClick={generateAdvice}>
