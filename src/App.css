@@ -1,0 +1,67 @@
+main {
+  background-color: var(--color-dark-grayish-blue);
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  max-width: 510px;
+  padding: 30px 20px 50px;
+
+  border-radius: 12px;
+  margin: 0 auto;
+}
+
+section .textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section .textContainer p {
+  color: var(--color-neon-green);
+  text-transform: uppercase;
+  font-weight: 700;
+
+  letter-spacing: 0.2rem;
+  font-size: 1.2rem;
+}
+
+section .textContainer h1 {
+  color: var(--color-light-cyan);
+  font-size: 2.6rem;
+  font-weight: 700;
+  max-width: 450px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+section .divider {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 30px;
+}
+
+section .randomButton {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+button {
+  border: 0;
+  background: var(--color-neon-green);
+  padding: 17px 19px;
+
+  border-radius: 50%;
+  position: relative;
+  top: 10px;
+
+  display: flex;
+}
+
+button:hover {
+  box-shadow: 0rem 0rem 1rem var(--color-neon-green);
+  cursor: pointer;
+}
