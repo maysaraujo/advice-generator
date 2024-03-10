@@ -35,8 +35,10 @@ const Advice = () => {
         <img src={DividerMobo} alt='Divider' />
       </div>
 
-      <div className='randomButton' onClick={generateAdvice}>
-        <RandomButton />
+      <div className='randomButton'>
+        <div onClick={generateAdvice}>
+          <RandomButton />
+        </div>
       </div>
     </section>
   );
