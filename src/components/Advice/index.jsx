@@ -1,24 +1,25 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import RandomButton from '../RandomButton';
 import Divider from '/images/pattern-divider-desktop.svg';
 import DividerMobo from '/images/pattern-divider-mobile.svg';
 
 const Advice = () => {
-  const [advice, setAdvice] = useState('');
-  const [adviceId, setAdviceId] = useState(0);
+  const [advice, setAdvice] = useState(
+    "It is easy to sit up and take notice, what's difficult is getting up and taking action."
+  );
+  const [adviceId, setAdviceId] = useState('117');
 
-  const generateAdvice = () => {
-    fetch('https://api.adviceslip.com/advice').then((response) =>
-      response.json().then((data) => {
-        setAdvice(data.slip.advice);
-        setAdviceId(data.slip.id);
-      })
-    );
+  const generateAdvice = async () => {
+    const res = await fetch('https://api.adviceslip.com/advice');
+    const data = await res.json();
+
+    setAdvice(data.slip.advice);
+    setAdviceId(data.slip.id);
   };
 
-  useEffect(() => {
+  function handleClick() {
     generateAdvice();
-  }, []);
+  }
 
   return (
     <section>
@@ -36,7 +37,7 @@ const Advice = () => {
       </div>
 
       <div className='randomButton'>
-        <div onClick={generateAdvice}>
+        <div onClick={handleClick}>
           <RandomButton />
         </div>
       </div>
