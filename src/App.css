@@ -84,10 +84,6 @@ footer a {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    padding: 0 30px;
-  }
-
   section .divider {
     display: none;
   }
@@ -100,5 +96,12 @@ footer a {
     display: flex;
     justify-content: center;
     margin: 25px 0 30px;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  body {
+    position: absolute;
+    padding: 0 30px;
   }
 }
